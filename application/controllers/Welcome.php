@@ -5,6 +5,14 @@ class Welcome extends CI_Controller
 {
 	public function index()
 	{
-		$this->load->view('welcome_message');
+
+		$data['count_dataset'] = $this->db->get('dataset')
+			->num_rows();
+		$data['count_mahasiswa'] = $this->db->get('mahasiswa')
+			->num_rows();
+		$data['count_elkam'] = 78;
+		$data['count_sso'] = $this->db->get('user')
+			->num_rows();
+		$this->load->view('welcome_message', $data);
 	}
 }

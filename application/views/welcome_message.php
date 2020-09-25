@@ -39,9 +39,12 @@
 	<header id="header" class="fixed-top">
 		<div class="container d-flex align-items-center">
 
-			<h1 class="logo mr-auto"><a href="index.html">SDS</a></h1>
+			<!-- <h1 class="logo mr-auto"><a href="index.html"><i class="bx bxs-flame"></i></a></h1> -->
 			<!-- Uncomment below if you prefer to use an image logo -->
-			<!-- <a href="index.html" class="logo mr-auto"><img src="<?= base_url(); ?>assets/img/logo.png" alt="" class="img-fluid"></a>-->
+			<!-- <a href="index.html" class="logo mr-auto"><img src="<?= base_url(); ?>assets/img/logo.png" alt="" class="img-fluid"></a> -->
+			<a href="<?= site_url(); ?>" class="logo mr-auto">
+				<h1 class="mb-0"><i class="bx bxs-flame"></i></h1>
+			</a>
 
 			<nav class="nav-menu d-none d-lg-block">
 				<ul>
@@ -51,7 +54,7 @@
 					<li><a href="<?= site_url(); ?>tentang">Tentang</a></li>
 				</ul>
 			</nav>
-			<a href="<?= site_url(); ?>/register" class="get-started-btn scrollto">Dapatkan Akses</a>
+			<a href="<?= site_url(); ?>/register" class="get-started-btn scrollto">Dapatkan Akses <i class="bx bx-lock-open-alt"></i></a>
 
 		</div>
 	</header>
@@ -65,7 +68,7 @@
 					<h2><i>Open Source Database</i> Kemahasiswaan KM PKN STAN yang dikelola oleh BEM PKN STAN</h2>
 					<div class="d-flex">
 						<a href="#about" class="btn-get-started scrollto">Yuk Pelajari</a>
-						<a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Dapatkan Akses <i class="icofont-play-alt-2"></i></a>
+						<a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Dapatkan Akses <i class="bx bx-lock-open-alt"></i></a>
 					</div>
 				</div>
 				<div class="col-lg-6 order-1 order-lg-2 hero-img text-center">
@@ -91,9 +94,9 @@
 							Portal Satu Data Staner (SDS) adalah inisiatif BEM PKN STAN untuk mendorong pergerakan dan pengambilan kebijakan Keluarga Mahasiswa berdasarkan data kemahasiswaan.
 						</p>
 						<ul>
-							<li><i class="icofont-check-circled"></i> Satu standar data dan satu portal data.</li>
-							<li><i class="icofont-check-circled"></i> Pemenuhan kebutuhan data publik bagi mahasiswa.</li>
-							<li><i class="icofont-check-circled"></i> Akses data mudah, akurat, dan aktual.</li>
+							<li><i class="icofont-check-circled"></i> Satu standar data dan satu portal data</li>
+							<li><i class="icofont-check-circled"></i> Pemenuhan kebutuhan data publik bagi mahasiswa</li>
+							<li><i class="icofont-check-circled"></i> Akses data mudah, akurat, dan aktual</li>
 						</ul>
 					</div>
 				</div>
@@ -108,23 +111,23 @@
 				<div class="row counters">
 
 					<div class="col-lg-3 col-6 text-center">
-						<span data-toggle="counter-up">20</span>
+						<span data-toggle="counter-up"><?= number_format($count_dataset, 0, ',', '.'); ?></span>
 						<p>Set Data</p>
 					</div>
 
 					<div class="col-lg-3 col-6 text-center">
-						<span data-toggle="counter-up">10,888</span>
+						<span data-toggle="counter-up"><?= number_format($count_mahasiswa, 0, ',', '.'); ?></span>
 						<p>Mahasiswa</p>
 					</div>
 
 					<div class="col-lg-3 col-6 text-center">
-						<span data-toggle="counter-up">20</span>
+						<span data-toggle="counter-up"><?= number_format($count_elkam, 0, ',', '.'); ?></span>
 						<p>Elemen Kampus</p>
 					</div>
 
 					<div class="col-lg-3 col-6 text-center">
-						<span data-toggle="counter-up">15</span>
-						<p>Peraturan</p>
+						<span data-toggle="counter-up"><?= number_format($count_sso, 0, ',', '.'); ?></span>
+						<p>Identitas SSO</p>
 					</div>
 
 				</div>
@@ -137,57 +140,57 @@
 			<div class="container">
 
 				<div class="section-title">
-					<span>Services</span>
-					<h2>Services</h2>
-					<p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+					<span>Layanan</span>
+					<h2>Layanan</h2>
+					<p>Apa saja fitur yang ditawarkan dalam portal ini?</p>
 				</div>
 
 				<div class="row">
 					<div class="col-lg-4 col-md-6 d-flex align-items-stretch">
 						<div class="icon-box">
-							<div class="icon"><i class="bx bxl-dribbble"></i></div>
-							<h4><a href="">Lorem Ipsum</a></h4>
-							<p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+							<div class="icon"><i class="bx bx-check-shield"></i></div>
+							<h4><a href="">Aman dan Terjaga</a></h4>
+							<p>Portal Satu Data Staner (SDS) berisi data untuk publik, bukan data pribadi/sensitif yang bersifat rahasia.</p>
 						</div>
 					</div>
 
 					<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
 						<div class="icon-box">
-							<div class="icon"><i class="bx bx-file"></i></div>
-							<h4><a href="">Sed ut perspiciatis</a></h4>
-							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+							<div class="icon"><i class="bx bx-data"></i></div>
+							<h4><a href="">Set Data Terbaru</a></h4>
+							<p>Data yang disediakan dalam Portal Satu Data Staner (SDS) ini selalu diperbarui secara berkala.</p>
 						</div>
 					</div>
 
 					<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
 						<div class="icon-box">
-							<div class="icon"><i class="bx bx-tachometer"></i></div>
-							<h4><a href="">Magni Dolores</a></h4>
-							<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-						<div class="icon-box">
-							<div class="icon"><i class="bx bx-world"></i></div>
-							<h4><a href="">Nemo Enim</a></h4>
-							<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-						<div class="icon-box">
-							<div class="icon"><i class="bx bx-slideshow"></i></div>
-							<h4><a href="">Dele cardo</a></h4>
-							<p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-						<div class="icon-box">
 							<div class="icon"><i class="bx bx-arch"></i></div>
-							<h4><a href="">Divera don</a></h4>
-							<p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+							<h4><a href="">Lintas Lembaga</a></h4>
+							<p>Portal Satu Data Staner (SDS) terdiri dari data berbagai Badan Kemahasiswaan dan Elemen Kampus KM PKN STAN.</p>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+						<div class="icon-box">
+							<div class="icon"><i class="bx bxs-face"></i></div>
+							<h4><a href="">Identitas Single Sign-On</a></h4>
+							<p>Satu akun identitas terpadu dari Portal Satu Data Staner (SDS) dan dapat digunakan untuk mengakses seluruh aplikasi Staner.</p>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+						<div class="icon-box">
+							<div class="icon"><i class="bx bx-message-square-error"></i></div>
+							<h4><a href="">Pelayanan Responsif</a></h4>
+							<p>Portal Satu Data Staner (SDS) memiliki pelayanan yang responsif dan dikelola oleh BEM PKN STAN.</p>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+						<div class="icon-box">
+							<div class="icon"><i class="bx bx-extension"></i></div>
+							<h4><a href="">Dukungan <i>Developer</i></a></h4>
+							<p>Dapatkan data yang kamu butuhkan menggunakan Web API resmi dari Portal Satu Data Staner (SDS).</p>
 						</div>
 					</div>
 
@@ -200,9 +203,9 @@
 			<div class="container">
 
 				<div class="text-center">
-					<h3>Call To Action</h3>
-					<p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<a class="cta-btn" href="#">Call To Action</a>
+					<h3>Segera Daftar untuk Akses Data</h3>
+					<p>Daftarkan akun personal, badan kemahasiswaan, elemen kampus, atau kepanitiaanmu agar mendapatkan akses data lebih mudah, akurat, dan aktual dari Portal Satu Data Staner (SDS).</p>
+					<a class="cta-btn" href="<?= site_url(); ?>registrasi">Dapatkan Akses <i class="bx bx-lock-open-alt"></i></a>
 				</div>
 
 			</div>
@@ -243,24 +246,17 @@
 						<form action="forms/contact.php" method="post" role="form" class="php-email-form">
 							<div class="form-row">
 								<div class="form-group col-md-6">
-									<input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" placeholder="Nama Lengkap" data-msg="Please enter at least 4 chars" />
-									<div class="validate"></div>
+									<input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" placeholder="Nama Lengkap" required />
 								</div>
 								<div class="form-group col-md-6">
-									<input type="email" class="form-control" name="email" id="email" data-rule="email" placeholder="Alamat Email" data-msg="Please enter a valid email" />
-									<div class="validate"></div>
+									<input type="email" class="form-control" name="email" id="email" data-rule="email" placeholder="No. WhatsApp" required />
 								</div>
 							</div>
 							<div class="form-group">
-								<textarea class="form-control" name="message" rows="5" placeholder="Kritik, Saran, atau Pertanyaan" data-rule="required" data-msg="Please write something for us"></textarea>
+								<textarea class="form-control" name="message" rows="5" placeholder="Kritik, Saran, atau Pertanyaan" required></textarea>
 								<div class="validate"></div>
 							</div>
-							<div class="mb-3">
-								<div class="loading">Loading</div>
-								<div class="error-message"></div>
-								<div class="sent-message">Your message has been sent. Thank you!</div>
-							</div>
-							<div class="text-center"><button type="submit">Kirim</button></div>
+							<div class="text-center"><button type="submit">Kirim <i class="bx bx-paper-plane"></i></button></div>
 						</form>
 					</div>
 
@@ -275,17 +271,13 @@
 	<footer id="footer">
 		<div class="container footer-bottom clearfix">
 			<div class="copyright">
-				&copy; Copyright <strong><span>eNno</span></strong>. All Rights Reserved
+				&copy; Copyright 2020 <strong><span>Portal Pusat Data Staner (SDS)</span></strong>. Hak Cipta dilindungi Undang-Undang.
 			</div>
 			<div class="credits">
-				<!-- All the links in the footer should remain intact. -->
-				<!-- You can delete the links only if you purchased the pro version. -->
-				<!-- Licensing information: https://bootstrapmade.com/license/ -->
-				<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/enno-free-simple-bootstrap-template/ -->
-				Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+				Dibangun oleh Tim PTI Kementerian Kominfo <a href="https://instagram.com/bempknstan">BEM PKN STAN</a>.
 			</div>
 		</div>
-	</footer><!-- End Footer -->
+	</footer>
 
 	<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
