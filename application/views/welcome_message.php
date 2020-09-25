@@ -90,8 +90,8 @@
 					</div>
 					<div class="col-lg-6 pt-4 pt-lg-0 content">
 						<h3>Temukan Data Kemahasiswaan dengan Mudah!</h3>
-						<p class="font-italic">
-							Portal Satu Data Staner (SDS) adalah inisiatif BEM PKN STAN untuk mendorong pergerakan dan pengambilan kebijakan Keluarga Mahasiswa berdasarkan data kemahasiswaan.
+						<p>
+							Portal Satu Data Staner (SDS) adalah inisiatif BEM PKN STAN untuk mendorong pergerakan dan pengambilan kebijakan Keluarga Mahasiswa yang tepat sasaran didukung dengan data kemahasiswaan.
 						</p>
 						<ul>
 							<li><i class="icofont-check-circled"></i> Satu standar data dan satu portal data</li>
