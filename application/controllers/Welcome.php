@@ -13,6 +13,6 @@ class Welcome extends CI_Controller
 		$data['count_elkam'] = 78;
 		$data['count_sso'] = $this->db->get('user')
 			->num_rows();
-		$this->load->view('welcome_message', $data);
+		$this->load->view('pages/welcome/index', $data);
 	}
 }
