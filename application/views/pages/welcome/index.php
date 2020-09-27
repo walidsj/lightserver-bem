@@ -15,7 +15,7 @@
 					<h2><i>Open Source Database</i> Kemahasiswaan KM PKN STAN yang dikelola oleh BEM PKN STAN</h2>
 					<div class="d-flex">
 						<a href="#about" class="btn-get-started scrollto">Yuk Pelajari</a>
-						<a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Dapatkan Akses <i class="bx bx-lock-open-alt"></i></a>
+						<a href="<?= site_url(); ?>registrasi" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Dapatkan Akses <i class="bx bx-lock-open-alt"></i></a>
 					</div>
 				</div>
 				<div class="col-lg-6 order-1 order-lg-2 hero-img text-center">
