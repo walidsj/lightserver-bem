@@ -10,9 +10,9 @@ require APPPATH . '/libraries/Format.php';
 class Mahasiswa extends REST_Controller
 {
 
-    function __construct()
+    function __construct($config = 'rest')
     {
-        parent::__construct();
+        parent::__construct($config);
         $this->load->model('Mahasiswa_model', 'Mahasiswa');
     }
 
@@ -36,7 +36,7 @@ class Mahasiswa extends REST_Controller
         } else {
             $this->response([
                 'status' => false,
-                'message' => 'Data mahasiswa tidak ditemukan.',
+                'error' => 'Data mahasiswa tidak ditemukan.',
             ], REST_Controller::HTTP_NOT_FOUND);
         }
     }
@@ -93,7 +93,7 @@ class Mahasiswa extends REST_Controller
                 'nama' => $this->post('nama', true),
                 'npm' => $this->post('npm', true),
                 'gender' => $this->post('gender', true),
-                'prodi' => $this->post('id_prodi', true),
+                'prodi_id' => $this->post('prodi_id', true),
                 'angkatan' => $this->post('angkatan', true),
                 'status' => $this->post('status', true),
                 'created' => date('Y-m-d H:i:s'),
@@ -106,7 +106,7 @@ class Mahasiswa extends REST_Controller
                     'status' => true,
                     'message' => 'Data mahasiswa berhasil ditambah.',
                     'data' => $mahasiswa
-                ], REST_Controller::HTTP_OK);
+                ], REST_Controller::HTTP_CREATED);
             } else {
                 $this->response([
                     'status' => false,
@@ -213,7 +213,7 @@ class Mahasiswa extends REST_Controller
                 'nama' => $this->put('nama', true),
                 'npm' => $this->put('npm', true),
                 'gender' => $this->put('gender', true),
-                'prodi' => $this->put('id_prodi', true),
+                'prodi_id' => $this->put('prodi_id', true),
                 'angkatan' => $this->put('angkatan', true),
                 'status' => $this->put('status', true),
                 'updated' => date('Y-m-d H:i:s')

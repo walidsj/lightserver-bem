@@ -10,7 +10,9 @@ class Mahasiswa_model extends CI_Model
         'mahasiswa.npm',
         'mahasiswa.gender',
         'prodi.nama AS prodi',
+        'mahasiswa.prodi_id',
         'jurusan.nama AS jurusan',
+        'jurusan.id AS jurusan_id',
         'mahasiswa.angkatan',
         'mahasiswa.status',
         'mahasiswa.created',
@@ -25,8 +27,8 @@ class Mahasiswa_model extends CI_Model
             'mahasiswa.gender' => !empty($get['gender']) ? $get['gender'] : null,
             'mahasiswa.angkatan' => !empty($get['angkatan']) ? $get['angkatan'] : null,
             'mahasiswa.status' => !empty($get['status']) ? $get['status'] : null,
-            'prodi.id' => !empty($get['id_prodi']) ? $get['id_prodi'] : null,
-            'jurusan.id' => !empty($get['id_jurusan']) ? $get['id_jurusan'] : null,
+            'prodi.id' => !empty($get['prodi_id']) ? $get['prodi_id'] : null,
+            'jurusan.id' => !empty($get['jurusan_id']) ? $get['jurusan_id'] : null,
         ]);
 
         $like = array_filter([
@@ -43,8 +45,8 @@ class Mahasiswa_model extends CI_Model
         }
 
         return $this->db->select($this->schema)
-            ->join('prodi', 'mahasiswa.prodi = prodi.id', 'left')
-            ->join('jurusan', 'prodi.jurusan = jurusan.id', 'left')
+            ->join('prodi', 'mahasiswa.prodi_id = prodi.id', 'left')
+            ->join('jurusan', 'prodi.jurusan_id = jurusan.id', 'left')
             ->where($where)
             ->like($like)
             ->get($this->table)->result();
@@ -68,7 +70,7 @@ class Mahasiswa_model extends CI_Model
             'nama' => !empty($put['nama']) ? $put['nama'] : null,
             'npm' => !empty($put['npm']) ? $put['npm'] : null,
             'gender' => !empty($put['gender']) ? $put['gender'] : null,
-            'prodi' => !empty($put['id_prodi']) ? $put['id_prodi'] : null,
+            'prodi' => !empty($put['prodi_id']) ? $put['prodi_id'] : null,
             'angkatan' => !empty($put['angkatan']) ? $put['angkatan'] : null,
             'status' => !empty($put['status']) ? $put['status'] : null,
             'updated' => $put['updated'],
