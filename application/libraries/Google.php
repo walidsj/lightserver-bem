@@ -9,8 +9,7 @@ class Google
 
     $state =   bin2hex(random_bytes(128 / 8));
 
-    require_once APPPATH . "libraries/google-api-php-client-master/src/Google/autoload.php";
-
+    include_once __DIR__ . '/../../vendor/autoload.php';
     $this->client = new Google_Client();
     $this->client->setClientId(getenv('CLIENT_ID'));
     $this->client->setClientSecret(getenv('CLIENT_SECRET'));
@@ -20,7 +19,7 @@ class Google
     $this->client->addScope('profile');
     $this->client->addScope('openid');
     // $this->client->setAccessType('online');
-    // $this->client->setIncludeGrantedScopes(true);s
+    // $this->client->setIncludeGrantedScopes(true);
 
     //validasi login atau tidak
     if (!empty($this->ci->session->access_token)) {

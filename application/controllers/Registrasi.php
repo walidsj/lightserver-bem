@@ -1,0 +1,39 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+
+class Registrasi extends CI_Controller
+{
+	public function  __construct()
+	{
+		parent::__construct();
+		var_dump($this->session->userdata);
+		$this->load->library('google');
+	}
+
+	public function index()
+	{
+		if ($this->google->isLoggedIn() == true) {
+			var_dump($this->google->getUserInfo());
+		} else {
+			redirect('registrasi/oauth2');
+		}
+	}
+
+	public function oauth2()
+	{
+		if ($this->google->isLoggedIn() == false) {
+			redirect($this->google->getUrlLogin());
+		} else {
+			redirect('registrasi');
+		}
+	}
+
+	public function oauth2_callback()
+	{
+		if ($this->google->setAccessToken() == true) {
+			redirect('registrasi');
+		} else {
+			show_404();
+		}
+	}
+}
