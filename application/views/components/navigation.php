@@ -16,7 +16,7 @@
                 <li class="<?= ($this->uri->segment(1) == "tentang") ? "active" : null; ?>"><a href="<?= site_url(); ?>tentang">Tentang</a></li>
             </ul>
         </nav>
-        <a href="<?= site_url(); ?>/register" class="get-started-btn scrollto">Dapatkan Akses <i class="bx bx-lock-open-alt"></i></a>
+        <a href="<?= site_url(); ?>register" class="get-started-btn scrollto">Dapatkan Akses <i class="bx bx-lock-open-alt"></i></a>
 
     </div>
 </header>
