@@ -45,6 +45,9 @@ class Mahasiswa_model extends CI_Model
         if (!empty($get['order_desc'])) {
             $this->db->order_by($get['order_desc'], 'DESC');
         }
+        if (!empty($get['rows']) && !empty($get['limit'])) {
+            $this->db->limit($get['rows'], $get['limit']);
+        }
 
         return $this->db->select($this->schema)
             ->join('prodi', 'mahasiswa.prodi_id = prodi.id', 'left')
