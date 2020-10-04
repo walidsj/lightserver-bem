@@ -14,6 +14,7 @@ class Mahasiswa_model extends CI_Model
         'jurusan.nama AS jurusan',
         'jurusan.id AS jurusan_id',
         'mahasiswa.angkatan',
+        'mahasiswa.kelas',
         'mahasiswa.status',
         'mahasiswa.created',
         'mahasiswa.updated'
@@ -26,6 +27,7 @@ class Mahasiswa_model extends CI_Model
             'mahasiswa.npm' => !empty($get['npm']) ? $get['npm'] : null,
             'mahasiswa.gender' => !empty($get['gender']) ? $get['gender'] : null,
             'mahasiswa.angkatan' => !empty($get['angkatan']) ? $get['angkatan'] : null,
+            'mahasiswa.kelas' => !empty($get['kelas']) ? $get['kelas'] : null,
             'mahasiswa.status' => !empty($get['status']) ? $get['status'] : null,
             'prodi.id' => !empty($get['prodi_id']) ? $get['prodi_id'] : null,
             'jurusan.id' => !empty($get['jurusan_id']) ? $get['jurusan_id'] : null,
