@@ -6,14 +6,15 @@ class Registrasi extends CI_Controller
 	public function  __construct()
 	{
 		parent::__construct();
-		var_dump($this->session->userdata);
 		$this->load->library('google');
 	}
 
 	public function index()
 	{
 		if ($this->google->isLoggedIn() == true) {
-			var_dump($this->google->getUserInfo());
+			set_cookie('key', json_encode($this->session->access_token), 30 * 24 * 60 * 60);
+			var_dump(json_decode(get_cookie('key'), true));
+			// var_dump($this->google->getUserInfo());
 		} else {
 			redirect('registrasi/oauth2');
 		}
