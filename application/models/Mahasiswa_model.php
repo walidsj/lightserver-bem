@@ -57,31 +57,31 @@ class Mahasiswa_model extends CI_Model
             ->get($this->table)->result();
     }
 
-    public function postMahasiswa($data)
-    {
-        $this->db->insert($this->table, $data);
-        return $this->db->affected_rows();
-    }
+    // public function postMahasiswa($data)
+    // {
+    //     $this->db->insert($this->table, $data);
+    //     return $this->db->affected_rows();
+    // }
 
-    public function deleteMahasiswa($id)
-    {
-        $this->db->delete($this->table, ['id' => $id]);
-        return $this->db->affected_rows();
-    }
+    // public function deleteMahasiswa($id)
+    // {
+    //     $this->db->delete($this->table, ['id' => $id]);
+    //     return $this->db->affected_rows();
+    // }
 
-    public function putMahasiswa($put)
-    {
-        $data = array_filter([
-            'nama' => !empty($put['nama']) ? $put['nama'] : null,
-            'npm' => !empty($put['npm']) ? $put['npm'] : null,
-            'gender' => !empty($put['gender']) ? $put['gender'] : null,
-            'prodi' => !empty($put['prodi_id']) ? $put['prodi_id'] : null,
-            'angkatan' => !empty($put['angkatan']) ? $put['angkatan'] : null,
-            'status' => !empty($put['status']) ? $put['status'] : null,
-            'updated' => $put['updated'],
-        ]);
+    // public function putMahasiswa($put)
+    // {
+    //     $data = array_filter([
+    //         'nama' => !empty($put['nama']) ? $put['nama'] : null,
+    //         'npm' => !empty($put['npm']) ? $put['npm'] : null,
+    //         'gender' => !empty($put['gender']) ? $put['gender'] : null,
+    //         'prodi' => !empty($put['prodi_id']) ? $put['prodi_id'] : null,
+    //         'angkatan' => !empty($put['angkatan']) ? $put['angkatan'] : null,
+    //         'status' => !empty($put['status']) ? $put['status'] : null,
+    //         'updated' => $put['updated'],
+    //     ]);
 
-        $this->db->update($this->table, $data, ['id' => $put['id']]);
-        return $this->db->affected_rows();
-    }
+    //     $this->db->update($this->table, $data, ['id' => $put['id']]);
+    //     return $this->db->affected_rows();
+    // }
 }
