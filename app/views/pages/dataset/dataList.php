@@ -86,7 +86,7 @@
             <div class="col-md-8 col-12">
                <div class="module-content">
                   <div class="input-group input-group-lg mb-3">
-                     <input aria-label="Masukan kata kunci pencarian" id="field-giant-search" type="text" class="form-control form-lg" name="q" aria-describedby="button-addon2" value="" autocomplete="off" placeholder="Masukan kata kunci pencarian">
+                     <input aria-label="Masukkan kata kunci dataset di sini" id="field-giant-search" type="text" class="form-control form-lg" name="q" aria-describedby="button-addon2" value="" autocomplete="off" placeholder="Masukkan kata kunci dataset di sini">
                   </div>
                   <div class="input-group mb-3">
                      <div class="input-group-prepend" style="display:block;">
