@@ -54,7 +54,7 @@
                         <input type="hidden" name="_token" value="DALK4AGbZrJK05hxXrbduvBkgnYQxF7Di7vWPnnV">
                         <div id="custom-search-input">
                            <div class="input-group" style="background:white;border-radius:5px;">
-                              <input type="text" class="form-control form-control-lg" name="q" placeholder="Masukan kata kunci pencarian" />
+                              <input type="text" class="form-control form-control-lg" name="q" placeholder="Cari dataset sesuatu di sini" />
                               <span class="input-group-btn">
                                  <button class="btn btn-lg" type="submit">
                                     <i class="fas fa-search"></i>
