@@ -73,7 +73,7 @@
    </section>
    <?php $this->load->view('components/footerComponent'); ?>
    </div>
-   <?php $this->load->view('components/footerComponent'); ?>
+   <?php $this->load->view('components/scriptComponent'); ?>
 </body>
 
 </html>
