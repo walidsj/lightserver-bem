@@ -48,7 +48,7 @@
                <div class="row">
                   <div class="col-md-7">
                      <h3 class="text-white mb-0">Database Kemahasiswaan</h3>
-                     <h1 class="text-white font-weight-bold"><?= getenv('app.Title'); ?></h1>
+                     <h1 class="text-white font-weight-bolder"><?= getenv('app.Title'); ?></h1>
                      <p class="text-white largetext" style="font-weight: 400;"><?= getenv('app.Subtitle'); ?></p>
                      <form method="GET" action="<?= site_url(); ?>dataset">
                         <input type="hidden" name="_token" value="DALK4AGbZrJK05hxXrbduvBkgnYQxF7Di7vWPnnV">
