@@ -50,7 +50,7 @@
          <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                <li class="breadcrumb-item"><a href="<?= site_url(); ?>"><i class="fa fa-home"></i><span> Home</span></a></li>
-               <li class="breadcrumb-item active"><a href="<?= site_url(); ?>/dataset">Dataset</a></li>
+               <li class="breadcrumb-item active"><a href="<?= site_url(); ?>dataset">Dataset</a></li>
             </ol>
          </nav>
          <form id="dataset-search-form" class="search-form" method="get">
@@ -112,7 +112,6 @@
                      <div class="col-md-12" style="border-bottom: 1px #000 !important;">
                         <a href="<?= site_url(); ?>dataset/detail/<?= $datasetItem->slug_dataset; ?>" style="color:gray !important;font-size:16px !important;" class="font-weight-bold"><?= $datasetItem->judul_dataset; ?></a><br>
                         <a href="<?= site_url(); ?>dataset/elkam/<?= $datasetItem->slug_elkam; ?>"><small style="color:gray;"><?= $datasetItem->nama_elkam; ?></small></a>
-                        <small> | <?= count(json_decode($datasetItem->berkas_dataset)); ?> berkas</small>
 
                         <span style="color:gray !important;" class="badge badge-light"><?= $datasetItem->tipeberkas_dataset; ?></span>
                         <br />

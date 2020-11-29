@@ -46,24 +46,4 @@
    .card-body {
       font-size: small;
    }
-
-   ssection#main .container {
-      color: #bd2130 !important;
-   }
-
-   section#main a.nav-link {
-      color: #bd2130 !important;
-   }
-
-   small {
-      color: gray;
-   }
-
-   .nicescroll-rails {
-      padding-right: 1px !important;
-   }
-
-   section#main .metadata a {
-      color: #bd2130 !important;
-   }
 </style>

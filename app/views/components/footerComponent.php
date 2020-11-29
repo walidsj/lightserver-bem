@@ -2,7 +2,7 @@
    <div class="container">
       <div class="row">
          <div class="col-12 col-sm-12 col-xs-12 col-lg-1 col-md-1">
-            <a href="https://www.bappenas.go.id">
+            <a href="https://bempknstan.org">
                <center><img src="<?= base_url(); ?>public/assets/img/logo_color.png"></center>
             </a><br />
          </div>
