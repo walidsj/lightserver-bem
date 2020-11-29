@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Dataset extends CI_Controller
+class Welcome extends CI_Controller
 {
 	public function index()
 	{
@@ -14,6 +14,6 @@ class Dataset extends CI_Controller
 			->num_rows();
 		$data['count_sso'] = $this->db->get('user')
 			->num_rows();
-		$this->load->view('pages/welcome/index', $data);
+		$this->load->view('pages/welcome/homePage', $data);
 	}
 }
