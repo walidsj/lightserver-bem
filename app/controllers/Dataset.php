@@ -18,7 +18,8 @@ class Dataset extends CI_Controller
 		$data['elkamList'] = $this->db->order_by('nama_elkam', 'ASC')
 			->get_where('elkam', ['status_elkam' => 1])
 			->result();
-		$data['labelList'] = $this->db->get_where('label_dataset', ['status_label_dataset' => 1])
+		$data['labelList'] = $this->db->order_by('judul_label_dataset', 'DESC')
+			->get_where('label_dataset', ['status_label_dataset' => 1])
 			->result();
 
 		# Load View

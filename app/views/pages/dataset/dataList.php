@@ -59,7 +59,7 @@
          <div class="row">
             <div class="col-md-4 col-12 d-none d-md-block">
                <div class="card mb-4 mr-0">
-                  <h6 class="card-header">Elemen Kampus<small style="float:right;"><a href="<?= site_url(); ?>dataset">[reset]</a></small></h6>
+                  <h6 class="card-header">Elemen Kampus<small style="float:right;"><a href="<?= site_url(); ?>dataset">Reset</a></small></h6>
                   <div id="filter-org" class="card-body" style="margin-left:0px !important;height:300px;overflow-y:scroll;">
                      <ul class="pl-3 text-dark" style="list-style-type: circle;">
                         <?php foreach ($elkamList as $elkamItem) : ?>
@@ -71,7 +71,7 @@
                   </div>
                </div>
                <div class="card mb-4 mr-0">
-                  <h6 class="card-header">Label Data<small style="float:right;"><a href="<?= site_url(); ?>dataset">[reset]</a></small></h6>
+                  <h6 class="card-header">Label Data<small style="float:right;"><a href="<?= site_url(); ?>dataset">Reset</a></small></h6>
                   <div id="filter-label" class="card-body" style="margin-left:0px !important;height:300px;overflow-y:scroll;">
                      <ul class="pl-3 text-dark" style="list-style-type: circle;">
                         <?php foreach ($labelList as $labelItem) : ?>
