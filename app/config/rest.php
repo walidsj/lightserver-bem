@@ -561,7 +561,7 @@ $config['allowed_cors_headers'] = [
   'Content-Type',
   'Accept',
   'Access-Control-Request-Method',
-  getenv('API_KEY_NAME')
+  'access_token'
 ];
 
 /*
