@@ -376,7 +376,7 @@ $config['rest_key_length'] = 40;
 | 2012/06/12. See RFC 6648 specification for more details
 |
 */
-$config['rest_key_name'] = 'X-API-KEY';
+$config['rest_key_name'] = getenv('API_KEY_NAME');
 
 /*
 |--------------------------------------------------------------------------
@@ -558,7 +558,7 @@ $config['check_cors'] = TRUE;
 $config['allowed_cors_headers'] = [
   'Origin',
   'X-Requested-With',
-  'X-API-KEY',
+  getenv('API_KEY_NAME'),
   'Content-Type',
   'Accept',
   'Access-Control-Request-Method'

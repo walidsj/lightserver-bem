@@ -14,14 +14,6 @@ class Mahasiswa extends REST_Controller
     {
         parent::__construct($config);
         $this->load->model('Mahasiswa_model', 'Mahasiswa');
-
-        header('Access-Control-Allow-Origin: *');
-        header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization");
-        header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
-        $method = $_SERVER['REQUEST_METHOD'];
-        if ($method == "OPTIONS") {
-            die();
-        }
     }
 
     public function index_get()
